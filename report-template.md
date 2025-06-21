@@ -3,26 +3,26 @@
 
 ## Initial Training
 ### What did you realize when you tried to submit your predictions? What changes were needed to the output of the predictor to submit your results?
-The accuracy of the model kept increasing.
+The accuracy of the model kept increasing from 1.8014 to 0.4897 and 0.4952, respectively, after including hyperparameters.
 
-### What was the top ranked model that performed?
-WeightedEnsemble_L3
+### What was the top-ranked model that performed?
+The best-performing model is WeightedEnsemble_L3, followed by WeightedEnsemble_L2, CatBoostCAT_BAG_L2, LightGBMXGB_BAG_L1, RandomForestRF_BAG_L2, LightGBMXGB_BAG_L2, CatBoostCAT_BAG_L1, and RandomForestRF_BAG_L1, respectively.
 
 ## Exploratory data analysis and feature creation
-### What did the exploratory analysis find and how did you add additional features?
-I added three columns, i.e., year, month, and date, by extracting the three columns from the datetime column.
+### What did the exploratory analysis find, and how did you add additional features?
+I added year, month, date, and hour by extracting the three columns from the datetime column.
 
-### How much better did your model preform after adding additional features and why do you think that is?
-The WeightedEnsemble_L3  model performed well, followed by RandomForestMSE_BAG_L2 and LightGBM_BAG_L2.
+### How much better did your model perform after adding additional features, and why do you think that is?
+The model's accuracy improved to 0.4952, since the new features might have provided relevant information to the model, such as identifying patterns between different classes.
 
-## Hyper parameter tuning
-### How much better did your model preform after trying different hyper parameters?
-The accuracy of the model kept improving as I re-trained using new features in the dataset.
+## Hyperparameter tuning
+### How much better did your model perform after trying different hyperparameters?
+There was no significant improvement after incorporating hyperparameters since the model scored 0.4952 from 0.4897, i.e., a 0.0055 difference.
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
 Fine-tuning the dataset using different algorithms to ensure an efficient model.
 
-### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
+### Create a table with the models you ran, the hyperparameters modified, and the Kaggle score.
 |model|hpo1|hpo2|hpo3|score|
 |--|--|--|--|--|
 |initial|3.28|63.37|368.24|1.7962|
@@ -43,4 +43,4 @@ https://rx4im9n1uveh8zr.studio.us-east-1.sagemaker.aws/jupyterlab/default/lab/tr
 
 ## Summary
 
-The more the model was fine-tuned, the more the model performed better.
+The more the model was fine-tuned, the better the model performance.
